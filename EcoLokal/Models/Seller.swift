@@ -13,4 +13,5 @@ struct Seller: Identifiable, Codable {
     var category: String
     var city: String
     var description: String
+    var rating: Double = 0
 }
