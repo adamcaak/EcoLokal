@@ -21,8 +21,11 @@ struct AddSellerView: View {
             Form {
                 Section(header: Text("Dane sprzedawcy")) {
                     TextField("Nazwa", text: $name)
-                    TextField("KAtegoria", text: $category)
+                    TextField("Kategoria", text: $category)
                     TextField("Miasto", text: $city)
+                    TextField("Opis", text: $description, axis: .vertical)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .lineLimit(3...6)
                 }
             }
 
@@ -30,9 +33,17 @@ struct AddSellerView: View {
                 Button("Dodaj") {
                     let newSeller = Seller(name: name, category: category, city: city, description: description)
                     viewModel.sellers.append(newSeller)
+                    
+                    //Reset pól formularza
+                    name = ""
+                    category = ""
+                    city = ""
+                    description = ""
+                    
+                    //Zamknięcie formularza
                     dismiss()
                 }
-                .disabled(name.isEmpty || category.isEmpty || city.isEmpty)
+                .disabled(name.isEmpty || category.isEmpty || city.isEmpty || description.isEmpty)
             }
         }
         .navigationTitle("Dodaj Sprzedawcę")

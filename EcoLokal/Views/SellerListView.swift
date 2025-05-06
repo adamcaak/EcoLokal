@@ -9,19 +9,21 @@ import SwiftUI
 
 struct SellerListView: View {
     @StateObject private var viewModel = SellerListViewModel()
-    
+
     var body: some View {
-        NavigationStack {
-            List(viewModel.sellers) { sellers in
-                NavigationLink(destination: SellerDetailView(seller: sellers)) {
-                    VStack(alignment: .leading) {
-                        Text(sellers.name)
-                            .font(.headline)
-                        Text("\(sellers.category) - \(sellers.city)")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
+        NavigationView {
+            List {
+                ForEach(viewModel.sellers) { seller in
+                    NavigationLink(destination: SellerDetailView(seller: seller)) {
+                        VStack(alignment: .leading) {
+                            Text(seller.name)
+                                .font(.headline)
+                            Text("\(seller.category) • \(seller.city)")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                        }
+                        .padding(.vertical, 4)
                     }
-                    .padding(.vertical, 4)
                 }
             }
             .navigationTitle("Eko Sprzedawcy")
@@ -33,6 +35,7 @@ struct SellerListView: View {
         }
     }
 }
+
 
 #Preview {
     SellerListView()
