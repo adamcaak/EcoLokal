@@ -24,5 +24,5 @@ struct SellerDetailView: View {
 }
 
 #Preview {
-    SellerDetailView(seller: Seller(name: "Test", category: "Test", city: "Test"))
+    SellerDetailView(seller: Seller(name: "Test", category: "Test", city: "Test", description: "Test"))
 }

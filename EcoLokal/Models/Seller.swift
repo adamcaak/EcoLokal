@@ -8,8 +8,9 @@
 import Foundation
 
 struct Seller: Identifiable, Codable {
-    let id = UUID()
-    let name: String
-    let category: String
-    let city: String
+    var id = UUID()
+    var name: String
+    var category: String
+    var city: String
+    var description: String
 }

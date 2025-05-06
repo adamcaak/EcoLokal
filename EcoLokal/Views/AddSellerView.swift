@@ -14,6 +14,7 @@ struct AddSellerView: View {
     @State private var name: String = " "
     @State private var category: String = " "
     @State private var city: String = " "
+    @State private var description: String = " "
     
     var body: some View {
         NavigationStack {
@@ -27,7 +28,7 @@ struct AddSellerView: View {
 
             Section {
                 Button("Dodaj") {
-                    let newSeller = Seller(name: name, category: category, city: city)
+                    let newSeller = Seller(name: name, category: category, city: city, description: description)
                     viewModel.sellers.append(newSeller)
                     dismiss()
                 }
