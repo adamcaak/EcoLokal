@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct SellerDetailView: View {
-    let seller: Seller
+    @Binding var seller: Seller
+    
     var body: some View {
         VStack(alignment: .leading,spacing: 16) {
             Text(seller.name)
@@ -23,6 +24,18 @@ struct SellerDetailView: View {
                 .font(.headline)
             Text(seller.description)
                 .font(.body)
+            
+            HStack {
+                Text("Ocena:")
+                ForEach(1...5, id: \.self) { index in
+                    Image(systemName: index <= seller.rating ? "star.fill" : "star")
+                        .foregroundColor(.yellow)
+                        .onTapGesture {
+                            seller.rating = index
+                        }
+                }
+            }
+            .padding(.top)
         }
         .padding()
         .navigationTitle("Szczegóły")
@@ -30,5 +43,5 @@ struct SellerDetailView: View {
 }
 
 #Preview {
-    SellerDetailView(seller: Seller(name: "Test", category: "Test", city: "Test", description: "Test"))
+    SellerDetailView(seller: .constant(Seller(name: "Test", category: "Test", city: "Test", description: "Test", rating: 3)))
 }

@@ -20,12 +20,31 @@ struct AddSellerView: View {
         NavigationStack {
             Form {
                 Section(header: Text("Dane sprzedawcy")) {
-                    TextField("Nazwa", text: $name)
-                    TextField("Kategoria", text: $category)
-                    TextField("Miasto", text: $city)
-                    TextField("Opis", text: $description, axis: .vertical)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .lineLimit(3...6)
+                    VStack(alignment: .leading) {
+                        Text("Nazwa sprzedawcy")
+                            .font(.headline)
+                    }
+                        TextField("Wpisz nazwę", text: $name)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding(.bottom)
+
+                        Text("Kategoria")
+                            .font(.headline)
+                        TextField("Wpisz kategorię", text: $category)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding(.bottom)
+
+                        Text("Miasto")
+                            .font(.headline)
+                        TextField("Wpisz miasto", text: $city)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding(.bottom)
+
+                        Text("Opis")
+                            .font(.headline)
+                        TextField("Wpisz opis", text: $description)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding(.bottom)
                 }
             }
 

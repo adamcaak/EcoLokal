@@ -13,8 +13,9 @@ struct SellerListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.sellers) { seller in
-                    NavigationLink(destination: SellerDetailView(seller: seller)) {
+                ForEach(viewModel.sellers.indices, id: \.self) { index in
+                    NavigationLink(destination: SellerDetailView(seller: $viewModel.sellers[index])) {
+                        let seller = viewModel.sellers[index]
                         VStack(alignment: .leading) {
                             Text(seller.name)
                                 .font(.headline)
