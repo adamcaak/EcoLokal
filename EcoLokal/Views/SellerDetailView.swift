@@ -19,6 +19,8 @@ struct SellerDetailView: View {
                 .font(.title3)
             Text("Miasto: \(seller.city)")
                 .font(.title3)
+            Text("Numer telefonu: \(seller.phoneNumber)")
+                .font(.title3)
             Divider()
             Text("Opis:")
                 .font(.headline)
@@ -43,5 +45,5 @@ struct SellerDetailView: View {
 }
 
 #Preview {
-    SellerDetailView(seller: .constant(Seller(name: "Test", category: "Test", city: "Test", description: "Test", rating: 3)))
+    SellerDetailView(seller: .constant(Seller(name: "Test", category: "Test", city: "Test", description: "Test", phoneNumber: "Test", rating: 3)))
 }
