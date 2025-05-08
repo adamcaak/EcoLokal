@@ -36,6 +36,15 @@ struct MainMenuView: View {
                             .cornerRadius(10)
                             .foregroundColor(.white)
                     }
+                    NavigationLink(destination: SettingsView()) {
+                        Text("Ustawienia")
+                            .font(.title3)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.green)
+                            .cornerRadius(10)
+                            .foregroundColor(.white)
+                    }
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, 30)
