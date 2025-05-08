@@ -48,7 +48,6 @@ struct LoginView: View {
                     Button("Nie masz konta? Zarejestruj się!") {
                         showRegister = true
                     }
-                    .padding(.top)
                     
                     NavigationLink("", destination: RegisterView(), isActive: $showRegister)
                         .hidden()
@@ -56,8 +55,6 @@ struct LoginView: View {
                     Button("Zresetuj hasło!") {
                         showResetPassword = true
                     }
-                    .padding(.top)
-                    
                     NavigationLink("", destination: ResetPasswordView(), isActive: $showResetPassword)
                         .hidden()
                 }
