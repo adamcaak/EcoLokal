@@ -53,24 +53,30 @@ struct AddSellerView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.bottom)
                 }
-            }
-            
-            Section {
-                Button("Dodaj") {
-                    let newSeller = Seller(name: name, category: category, city: city, description: description, phoneNumber: phoneNumber)
-                    viewModel.sellers.append(newSeller)
-                    
-                    //Reset pól formularza
-                    name = ""
-                    category = ""
-                    city = ""
-                    description = ""
-                    phoneNumber = ""
-                    
-                    //Zamknięcie formularza
-                    dismiss()
+                
+                VStack {
+                    Button("Dodaj") {
+                        let newSeller = Seller(name: name, category: category, city: city, description: description, phoneNumber: phoneNumber)
+                        viewModel.sellers.append(newSeller)
+                        
+                        //Reset pól formularza
+                        name = ""
+                        category = ""
+                        city = ""
+                        description = ""
+                        phoneNumber = ""
+                        
+                        //Zamknięcie formularza
+                        dismiss()
+                    }
+                    .disabled(name.isEmpty || category.isEmpty || city.isEmpty || description.isEmpty || phoneNumber.isEmpty)
+                    .font(.title3)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.green)
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
                 }
-                .disabled(name.isEmpty || category.isEmpty || city.isEmpty || description.isEmpty || phoneNumber.isEmpty)
             }
         }
         .navigationTitle("Dodaj Sprzedawcę")
