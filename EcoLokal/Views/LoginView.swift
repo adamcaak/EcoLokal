@@ -11,6 +11,7 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showRegister: Bool = false
+    @State private var showResetPassword: Bool = false
     
     var body: some View {
         NavigationView {
@@ -49,6 +50,14 @@ struct LoginView: View {
                 .padding(.top)
                 
                 NavigationLink("", destination: RegisterView(), isActive: $showRegister)
+                    .hidden()
+                
+                Button("Zresetuj hasło!") {
+                    showResetPassword = true
+                }
+                .padding(.top)
+                
+                NavigationLink("", destination: ResetPassword(), isActive: $showResetPassword)
                     .hidden()
             }
             .padding()
