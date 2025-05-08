@@ -44,21 +44,23 @@ struct LoginView: View {
                         .cornerRadius(10)
                 }
                 
-                Button("Nie masz konta? Zarejestruj się!") {
-                    showRegister = true
+                VStack {
+                    Button("Nie masz konta? Zarejestruj się!") {
+                        showRegister = true
+                    }
+                    .padding(.top)
+                    
+                    NavigationLink("", destination: RegisterView(), isActive: $showRegister)
+                        .hidden()
+                    
+                    Button("Zresetuj hasło!") {
+                        showResetPassword = true
+                    }
+                    .padding(.top)
+                    
+                    NavigationLink("", destination: ResetPasswordView(), isActive: $showResetPassword)
+                        .hidden()
                 }
-                .padding(.top)
-                
-                NavigationLink("", destination: RegisterView(), isActive: $showRegister)
-                    .hidden()
-                
-                Button("Zresetuj hasło!") {
-                    showResetPassword = true
-                }
-                .padding(.top)
-                
-                NavigationLink("", destination: ResetPassword(), isActive: $showResetPassword)
-                    .hidden()
             }
             .padding()
         }
