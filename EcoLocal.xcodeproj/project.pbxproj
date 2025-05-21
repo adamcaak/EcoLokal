@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		BB233F8E2DC95F4E00CE65E2 /* EcoLokal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoLokal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB233F8E2DC95F4E00CE65E2 /* EcoLocal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoLocal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		BB233F902DC95F4E00CE65E2 /* EcoLokal */ = {
+		BB233F902DC95F4E00CE65E2 /* EcoLocal */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = EcoLokal;
+			path = EcoLocal;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		BB233F852DC95F4E00CE65E2 = {
 			isa = PBXGroup;
 			children = (
-				BB233F902DC95F4E00CE65E2 /* EcoLokal */,
+				BB233F902DC95F4E00CE65E2 /* EcoLocal */,
 				BB233F8F2DC95F4E00CE65E2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		BB233F8F2DC95F4E00CE65E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB233F8E2DC95F4E00CE65E2 /* EcoLokal.app */,
+				BB233F8E2DC95F4E00CE65E2 /* EcoLocal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB233F8D2DC95F4E00CE65E2 /* EcoLokal */ = {
+		BB233F8D2DC95F4E00CE65E2 /* EcoLocal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB233F9E2DC95F5000CE65E2 /* Build configuration list for PBXNativeTarget "EcoLokal" */;
+			buildConfigurationList = BB233F9E2DC95F5000CE65E2 /* Build configuration list for PBXNativeTarget "EcoLocal" */;
 			buildPhases = (
 				BB233F8A2DC95F4E00CE65E2 /* Sources */,
 				BB233F8B2DC95F4E00CE65E2 /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				BB233F902DC95F4E00CE65E2 /* EcoLokal */,
+				BB233F902DC95F4E00CE65E2 /* EcoLocal */,
 			);
-			name = EcoLokal;
+			name = EcoLocal;
 			packageProductDependencies = (
 			);
 			productName = EcoLokal;
-			productReference = BB233F8E2DC95F4E00CE65E2 /* EcoLokal.app */;
+			productReference = BB233F8E2DC95F4E00CE65E2 /* EcoLocal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BB233F892DC95F4E00CE65E2 /* Build configuration list for PBXProject "EcoLokal" */;
+			buildConfigurationList = BB233F892DC95F4E00CE65E2 /* Build configuration list for PBXProject "EcoLocal" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB233F8D2DC95F4E00CE65E2 /* EcoLokal */,
+				BB233F8D2DC95F4E00CE65E2 /* EcoLocal */,
 			);
 		};
 /* End PBXProject section */
@@ -305,7 +305,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB233F892DC95F4E00CE65E2 /* Build configuration list for PBXProject "EcoLokal" */ = {
+		BB233F892DC95F4E00CE65E2 /* Build configuration list for PBXProject "EcoLocal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB233F9C2DC95F5000CE65E2 /* Debug */,
@@ -314,7 +314,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB233F9E2DC95F5000CE65E2 /* Build configuration list for PBXNativeTarget "EcoLokal" */ = {
+		BB233F9E2DC95F5000CE65E2 /* Build configuration list for PBXNativeTarget "EcoLocal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB233F9F2DC95F5000CE65E2 /* Debug */,

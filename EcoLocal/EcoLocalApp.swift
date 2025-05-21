@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct EcoLokalApp: App {
+struct EcoLocalApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
