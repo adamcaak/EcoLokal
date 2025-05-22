@@ -35,6 +35,7 @@ struct LoginView: View {
                 
                 Button(action: {
                     //Logika logowania
+                    NavigationLink("", destination: MainTabView())
                     print("Zaloguj \(email)")
                 }) {
                     Text("Zaloguj się")
